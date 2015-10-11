@@ -33,12 +33,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\FirstNativeViewModel.cs" />
-    <Compile Include="ViewModels\SecondXamarinViewModel.cs" />
     <Compile Include="MvxPresenterHelpers.cs" />
-    <Compile Include="XamarinPages\SecondPage.xaml.cs">
+    <Compile Include="ViewModels\ThirdNativeViewModel.cs" />
+    <Compile Include="FormsPages\SecondPage.xaml.cs">
       <DependentUpon>SecondPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\ThirdNativeViewModel.cs" />
+    <Compile Include="ViewModels\SecondXFViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -64,11 +64,12 @@
     <None Include="ToDo-MvvmCross\_ Core.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XamarinPages\" />
+    <Folder Include="FormsPages\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XamarinPages\SecondPage.xaml">
+    <EmbeddedResource Include="FormsPages\SecondPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <LogicalName>MvvmCrossNavigationDemo.XamarinPages.SecondPage.xaml</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

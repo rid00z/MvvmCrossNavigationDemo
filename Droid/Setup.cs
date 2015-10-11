@@ -5,6 +5,9 @@ using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Views;
+using Cirrious.CrossCore.Droid.Platform;
+using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.Platform;
 
 namespace MvvmCrossNavigationDemo.Droid
 {
@@ -19,12 +22,6 @@ namespace MvvmCrossNavigationDemo.Droid
             return new Core.App();
         }
 
-		protected override void InitializeFirstChance ()
-		{
-			base.InitializeFirstChance ();
-			Mvx.RegisterSingleton<IMvxViewPresenter>(new MvxFormsDroidPagePresenter());
-		}
-		
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();
@@ -32,7 +29,7 @@ namespace MvvmCrossNavigationDemo.Droid
 
 		protected override IMvxAndroidViewPresenter CreateViewPresenter ()
 		{
-			return Mvx.Resolve<IMvxViewPresenter>() as MvxFormsDroidPagePresenter;
-		}
+            return new MvxFormsDroidPagePresenter ();
+		}          
     }
 }

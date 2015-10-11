@@ -24,6 +24,15 @@ namespace MvvmCrossNavigationDemo.Core.ViewModels
 				});
 			}
 		} 
+
+        public MvxCommand MoveToNext {
+            get {
+
+                return new MvxCommand (() => {
+                    ShowViewModel<FirstNativeViewModel>();
+                });
+            }
+        } 
 	}
 }
 

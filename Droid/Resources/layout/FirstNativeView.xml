@@ -9,6 +9,12 @@
         android:layout_height="wrap_content"
         android:textSize="25dp"
         local:MvxBind="Text PageContent" />
+        <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Moving to Front"
+        local:MvxBind="Click MoveToFront" />
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

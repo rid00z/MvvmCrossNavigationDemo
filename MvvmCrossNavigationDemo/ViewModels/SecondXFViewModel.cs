@@ -3,9 +3,9 @@ using Cirrious.MvvmCross.ViewModels;
 
 namespace MvvmCrossNavigationDemo.Core.ViewModels
 {
-	public class SecondXamarinViewModel: MvxViewModel
+	public class SecondXFViewModel : MvxViewModel
 	{
-		public SecondXamarinViewModel ()
+		public SecondXFViewModel ()
 		{
 		}
 
