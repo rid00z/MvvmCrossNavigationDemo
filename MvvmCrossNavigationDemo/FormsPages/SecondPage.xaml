@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MvvmCrossNavigationDemo.Core.SecondPage" Title="Hello XAML Page" Padding="10, 100, 10, 10">
+	<StackLayout Orientation="Vertical">
+		<Label Text="{Binding PageContent}" VerticalOptions="Start" FontSize="Medium" TextColor="Black" />
+		<Button Text="Move to Next" Command="{Binding MoveToNext}" WidthRequest="100" HeightRequest="70"/>
+		<Button Text="Move to Front" Command="{Binding MoveToFront}" WidthRequest="100" HeightRequest="70" />
+	</StackLayout>
+</ContentPage>
