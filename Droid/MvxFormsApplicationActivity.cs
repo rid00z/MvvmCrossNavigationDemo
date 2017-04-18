@@ -9,9 +9,9 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Droid.Platform;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Droid.Views;
+using MvvmCross.Platform.Droid.Platform;
+using MvvmCross.Platform;
 
 namespace MvvmCrossNavigationDemo.Droid
 {

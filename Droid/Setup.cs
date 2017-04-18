@@ -1,13 +1,10 @@
 using Android.Content;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Droid.Views;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Views;
-using Cirrious.CrossCore.Droid.Platform;
-using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.Platform;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Views;
+using MvvmCross.Core.Views;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
 
 namespace MvvmCrossNavigationDemo.Droid
 {
