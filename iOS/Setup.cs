@@ -1,13 +1,13 @@
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Touch.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
 using UIKit;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
+using MvvmCross.iOS.Views.Presenters;
 using Xamarin.Forms;
+using MvvmCross.Platform.Platform;
 
 namespace MvvmCrossNavigationDemo.iOS
 {
-	public class Setup : MvxTouchSetup
+	public class Setup : MvxIosSetup
 	{
 		public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
@@ -24,7 +24,7 @@ namespace MvvmCrossNavigationDemo.iOS
             return new DebugTrace();
         }
 
-		protected override IMvxTouchViewPresenter CreatePresenter ()
+		protected override IMvxIosViewPresenter CreatePresenter ()
 		{
 			Forms.Init ();
 			return new MvxFormsTouchPagePresenter (ApplicationDelegate ,Window);
