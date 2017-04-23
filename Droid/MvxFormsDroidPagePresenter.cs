@@ -1,11 +1,10 @@
 ﻿using System;
-using Cirrious.MvvmCross.Droid.Views;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Droid.Views;
+using MvvmCross.Core.ViewModels;
 using System.Collections.Generic;
 using MvvmCrossNavigationDemo.Core;
 using Android.App;
-using Cirrious.MvvmCross.Views;
-using Cirrious.CrossCore;
+using MvvmCross.Core.Views;
 using Android.Content;
 
 namespace MvvmCrossNavigationDemo.Droid

@@ -1,9 +1,9 @@
 ﻿using System;
 using Foundation;
-using Cirrious.MvvmCross.Touch.Views;
+using MvvmCross.iOS.Views;
 using CoreGraphics;
 using UIKit;
-using Cirrious.MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.BindingContext;
 using ObjCRuntime;
 
 namespace MvvmCrossNavigationDemo.iOS.Views

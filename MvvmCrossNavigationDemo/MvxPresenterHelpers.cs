@@ -1,10 +1,10 @@
 ﻿using System;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 using Xamarin.Forms;
-using Cirrious.CrossCore;
 using System.Reflection;
-using Cirrious.CrossCore.IoC;
 using System.Linq;
+using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
 
 namespace MvvmCrossNavigationDemo.Core
 {

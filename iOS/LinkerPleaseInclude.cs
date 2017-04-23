@@ -1,17 +1,24 @@
-using System;
 using System.Collections.Specialized;
 using System.Windows.Input;
-using Cirrious.MvvmCross.Touch.Views;
 using Foundation;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
 using UIKit;
 
 namespace MvvmCrossNavigationDemo.iOS
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does ensure types and properties
     // are preserved in the deployed app
-    [Preserve(AllMembers = true)]
+    [Foundation.Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
+		public void Include(MvxTaskBasedBindingContext c)
+        {
+            c.Dispose();
+            var c2 = new MvxTaskBasedBindingContext();
+            c2.Dispose();
+        }
+
         public void Include(UIButton uiButton)
         {
             uiButton.TouchUpInside += (s, e) =>
@@ -89,23 +96,22 @@ namespace MvvmCrossNavigationDemo.iOS
 
         public void Include(INotifyCollectionChanged changed)
         {
-            changed.CollectionChanged += (s, e) => { var test = string.Format("{0}{1}{2}{3}{4}", e.Action,e.NewItems, e.NewStartingIndex, e.OldItems, e.OldStartingIndex); } ;
+            changed.CollectionChanged += (s, e) => { var test = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
-		
+
         public void Include(ICommand command)
         {
            command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
-		public void Include(Cirrious.CrossCore.IoC.MvxPropertyInjector injector)
-		{
-			injector = new Cirrious.CrossCore.IoC.MvxPropertyInjector();
-		} 
+        public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
+        {
+            injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
+        } 
 
-		public void Include(System.ComponentModel.INotifyPropertyChanged changed)
-		{
-			changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
-		}
-	}
+        public void Include(System.ComponentModel.INotifyPropertyChanged changed)
+        {
+            changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
+        }
+    }
 }
-
