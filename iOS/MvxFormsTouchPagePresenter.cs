@@ -34,6 +34,7 @@ namespace MvvmCrossNavigationDemo.iOS
 
                 //Creating the view controller from the content page
                 var viewController = contentPage.CreateViewController ();
+				viewController.Title = contentPage.Title;
 
                 if (this.MasterNavigationController == null) 
                 {
